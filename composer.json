@@ -1,0 +1,74 @@
+{
+  "name": "zoglo/contao-form-field-access",
+  "type": "contao-bundle",
+  "description": "Access protection for form fields",
+  "keywords": [
+    "contao",
+    "form",
+    "access"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sebastian Zoglowek",
+      "homepage": "https://github.com/zoglo",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "contao/core-bundle": "^4.13 || ^5.3",
+    "symfony/config": "^5.4 || ^6.4 || ^7.0",
+    "symfony/dependency-injection": "^5.4 || ^6.4 || ^7.0",
+    "symfony/http-kernel": "^5.4 || ^6.4 || ^7.0",
+    "symfony/security-core": "^5.4 || ^6.4 || ^7.0"
+  },
+  "require-dev": {
+    "contao/easy-coding-standard": "^6.13",
+    "contao/manager-plugin": "^2.3.1",
+    "phpstan/phpstan": "^2.0",
+    "phpstan/phpstan-doctrine": "^2.0",
+    "phpstan/phpstan-phpunit": "^2.0",
+    "phpstan/phpstan-symfony": "^2.0",
+    "shipmonk/composer-dependency-analyser": "^1.8",
+    "slam/phpstan-extensions": "^6.6"
+  },
+  "conflict": {
+    "contao/core": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zoglo\\ContaoFormFieldAccess\\": "src/"
+    },
+    "classmap": [
+      "contao/"
+    ],
+    "exclude-from-classmap": [
+      "contao/dca/",
+      "contao/languages/"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "1.0.x-dev"
+    },
+    "contao-manager-plugin": "Zoglo\\ContaoFormFieldAccess\\ContaoManager\\Plugin"
+  },
+  "scripts": {
+    "all": [
+      "@ecs",
+      "@phpstan"
+    ],
+    "ecs": "@php vendor/bin/ecs check --fix",
+    "phpstan": "@php vendor/bin/phpstan analyze",
+    "depcheck": "@php vendor/bin/composer-dependency-analyser --config=depcheck.php"
+  },
+  "config": {
+    "allow-plugins": {
+      "contao/manager-plugin": true,
+      "contao-components/installer": true,
+      "php-http/discovery": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

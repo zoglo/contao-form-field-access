@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    Zoglo\ContaoFormFieldAccess\EventListener\LoadFormFieldListener:
+        arguments:
+            - '@contao.security.token_checker'
+            - '@security.authorization_checker'
