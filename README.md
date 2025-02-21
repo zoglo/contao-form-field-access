@@ -2,10 +2,7 @@
 
 <p align="center"><i>Adds form field protection to the contao form generator.</i></p>
 <p align="center">
-    <a href="https://packagist.org/packages/zoglo/contao-form-field-access"><img src="https://img.shields.io/packagist/v/zoglo/contao-form-field-access.svg" alt="packagist version"></a>
-    <img src="https://img.shields.io/badge/Contao-%5E4.13%20%7C%7C%20%5E5.3-blue?color=f47c00">
-    <a href="https://packagist.org/packages/zoglo/contao-form-field-access"><img src="https://img.shields.io/packagist/dependency-v/zoglo/contao-form-field-access/php?color=4F5B93"></a>
-    <a href="https://github.com/zoglo/contao-form-field-access"><img src="https://img.shields.io/github/license/zoglo/contao-form-field-access?color=2f7d32"/></a>
+
 </p>
 
 ## Description
